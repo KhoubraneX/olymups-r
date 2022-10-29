@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/olymups-r/static/css/main.f0da5b66.css",
+    "main.js": "/olymups-r/static/js/main.d02ac9d4.js",
+    "static/media/Chimera_RunningPose 1.png": "/olymups-r/static/media/Chimera_RunningPose 1.e255faf6858975285341.png",
+    "static/media/Medusa.png": "/olymups-r/static/media/Medusa.638ebb83d12e9a728735.png",
+    "static/media/sbata.png": "/olymups-r/static/media/sbata.476f9ff4d3df02e4791a.png",
+    "static/media/Zeus.png": "/olymups-r/static/media/Zeus.a0a4f308920b60b180e6.png",
+    "static/media/Achilles.png": "/olymups-r/static/media/Achilles.2e948520ab1b2e062c36.png",
+    "static/media/Panton W01 Heavy.ttf": "/olymups-r/static/media/Panton W01 Heavy.f4a2792bbb87b5bc803c.ttf",
+    "static/media/Montserrat.ttf": "/olymups-r/static/media/Montserrat.21bc8508963f3d4ca6b9.ttf",
+    "static/media/Olympus Game Logo 2.png": "/olymups-r/static/media/Olympus Game Logo 2.a50d2d1d84c08675918c.png",
+    "static/media/Asset 3@4x 1-1.png": "/olymups-r/static/media/Asset 3@4x 1-1.950db0ac06cceb9cf674.png",
+    "static/media/ZeusPose1_Sequence_00270 1.png": "/olymups-r/static/media/ZeusPose1_Sequence_00270 1.cb6702ccd60512b63f77.png",
+    "static/media/Mask group-2.png": "/olymups-r/static/media/Mask group-2.2ce918edb3fced272191.png",
+    "static/media/Mask group-5.png": "/olymups-r/static/media/Mask group-5.2ce918edb3fced272191.png",
+    "static/media/Mask group-1.png": "/olymups-r/static/media/Mask group-1.4eb78d63636a909ffabd.png",
+    "static/media/ApolonPose_Sequence_00266 1.png": "/olymups-r/static/media/ApolonPose_Sequence_00266 1.3dbc4959a9016147ef29.png",
+    "static/media/Mask group-6.png": "/olymups-r/static/media/Mask group-6.ddc7e1d22a2c65cb0ca9.png",
+    "static/media/Mask group.png": "/olymups-r/static/media/Mask group.ddc7e1d22a2c65cb0ca9.png",
+    "static/media/AchillesSide_01 Full HD 1920 1.png": "/olymups-r/static/media/AchillesSide_01 Full HD 1920 1.cec19bd17da62eb58ed2.png",
+    "static/media/Mask group-3.png": "/olymups-r/static/media/Mask group-3.6f5b9f2248431c15cf6e.png",
+    "static/media/Asset 5@4x 1.png": "/olymups-r/static/media/Asset 5@4x 1.9f7a5d30b9576367ac26.png",
+    "static/media/Asset 3@4x 1-2.png": "/olymups-r/static/media/Asset 3@4x 1-2.fd42abab7108b8935006.png",
+    "static/media/Mask group-4.png": "/olymups-r/static/media/Mask group-4.86f3d103bbd914c835f3.png",
+    "static/media/telegram@4x 1.svg": "/olymups-r/static/media/telegram@4x 1.3b9696bde865a018bdaf9449aa67b16a.svg",
+    "static/media/Asset 3@4x 1.png": "/olymups-r/static/media/Asset 3@4x 1.6c3b5ea28a6f928a0a9d.png",
+    "static/media/descord 1@4x 1.svg": "/olymups-r/static/media/descord 1@4x 1.6a6648ca92f49b3c40acccfd986f8a65.svg",
+    "static/media/Twitter_icon 1.svg": "/olymups-r/static/media/Twitter_icon 1.5299fb050175c2979b817322a9ac0de0.svg",
+    "index.html": "/olymups-r/index.html",
+    "main.f0da5b66.css.map": "/olymups-r/static/css/main.f0da5b66.css.map",
+    "main.d02ac9d4.js.map": "/olymups-r/static/js/main.d02ac9d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0da5b66.css",
+    "static/js/main.d02ac9d4.js"
+  ]
+}
