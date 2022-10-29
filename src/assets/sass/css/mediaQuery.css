@@ -1,0 +1,479 @@
+@media (max-width: 1200px) {
+  .avatar-info .info .box div {
+    font-size: 12px;
+    padding: 10px 30px;
+  }
+
+  .foundry-box {
+    column-gap: 30px;
+  }
+
+  .select_mate {
+    font-size: 12px;
+  }
+
+  .avatar-info .avatar-main {
+    height: 350px;
+  }
+
+  .select.char .desc-time,
+.detail-av .status p.desc-Evolve,
+.content .hero .hero-content .btn-hero,
+.box-chests .chest .detail-chest button {
+    font-size: 10px;
+  }
+
+  .left-side .logo img {
+    height: 60px;
+  }
+
+  .left-side .btn-fillter {
+    padding-top: 20px;
+  }
+
+  .left-side .logo {
+    padding-bottom: 20px;
+  }
+
+  .left-side .btn-fillter .btn {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  .left-side .btn-fillter .btn .cercle-btn {
+    width: 15px;
+    height: 15px;
+  }
+
+  .smm-box .smm img {
+    height: 28px;
+  }
+
+  .arrows .icon-arrow {
+    height: 25px;
+  }
+
+  .smm-box .btn-disc {
+    font-size: 12px;
+  }
+
+  .left-side .btn-fillter .btn:last-child,
+.smm-box {
+    margin-bottom: 20px;
+  }
+
+  .smm-box .smm {
+    padding-bottom: 20px;
+  }
+
+  .avatar-icons .icon::after {
+    border-radius: 24px;
+    width: 51px;
+    height: 51px;
+  }
+
+  .avatar-icons .icon img {
+    height: 55px;
+  }
+
+  :root {
+    --width-left-side: 260px;
+    --header-img-height: 30px;
+    --border-val: 1.5px;
+  }
+
+  .btn-def button,
+.detail-av .status p,
+.cont_select_int li,
+.content .hero .hero-content {
+    font-size: 12px;
+  }
+
+  .icon_select_mate {
+    top: 8px;
+  }
+
+  .content .hero {
+    padding: 20px 50px;
+  }
+
+  .content .hero .hero-content p.par:nth-of-type(2) {
+    font-size: 17px;
+  }
+
+  .marketplace-box h2 {
+    font-size: 22px;
+  }
+
+  .content .sec-info .info-noti img {
+    height: 415px;
+    top: -320px;
+  }
+
+  .box-chests .chest .icon-chest img {
+    height: 80px;
+  }
+
+  .box-chests .chest .detail-chest p,
+.evolving-stones-detail p {
+    font-size: 14px;
+  }
+
+  .box-chests {
+    grid-template-columns: repeat(3, minmax(160px, 160px));
+  }
+
+  .box-chests .chest {
+    padding-bottom: 10px;
+    width: 140px;
+  }
+
+  .box-chests .chest .icon-chest .img .icon-info {
+    height: 20px;
+  }
+
+  .box-chests .chest .icon-chest .img {
+    padding: 10px 0 10px 0;
+  }
+
+  .select_mate {
+    width: 140px;
+    min-width: 140px;
+  }
+  .select_mate .cont_select_int {
+    width: 140px !important;
+  }
+
+  .foundry-box .foundry .info .process-box p,
+.foundry-box .Stone-progress .info .process-box p {
+    font-size: 11px;
+  }
+
+  .process-f {
+    height: 10px;
+  }
+
+  .foundry-box .foundry .title,
+.foundry-box .Stone-progress .title {
+    font-size: 16px;
+  }
+
+  .foundry-box .foundry img,
+.foundry-box .Stone-progress img {
+    height: 50px;
+  }
+
+  .foundry-box .Stone-progress .info .process-box p.desc,
+.foundry-box .Stone-progress .info .process-box p.desc-n,
+.evolving-stones-detail .stones .stone button {
+    font-size: 10px;
+  }
+
+  .Stone-progress .info .process-box .content .btn-def button {
+    width: 60px;
+    font-size: 10px;
+    padding: 4px 15px;
+  }
+
+  .selecionado_opcion {
+    font-size: 12px;
+  }
+
+  .foundry .select_mate {
+    width: 123px;
+    min-width: 123px;
+  }
+  .foundry .select_mate .cont_select_int {
+    width: 123px !important;
+  }
+  .foundry .btn-def button {
+    padding: 6px 13px;
+    width: 140px;
+  }
+
+  .stone .btn-def {
+    margin-top: 10px;
+  }
+
+  .foundry-box .foundry .info .process-box p.desc,
+.foundry-box .foundry .info .process-box p.desc-n {
+    font-size: 9px;
+  }
+
+  .stone-create-box > p {
+    font-size: 12px;
+  }
+
+  .evolving-stones-detail .stones img {
+    height: 35px;
+  }
+
+  .content-header {
+    font-size: 12px;
+  }
+
+  .content .sec-info .info-news .title,
+.content .sec-info .content-noti .title {
+    font-size: 16px;
+  }
+
+  .content .sec-info .noti-desc .noti {
+    font-size: 9px;
+  }
+}
+@media (max-width: 992px) {
+  .left-side .logo img {
+    height: 32px;
+  }
+
+  .left-side {
+    padding: 15px 10px;
+  }
+
+  :root {
+    --width-left-side: 100px;
+  }
+
+  .smm-box .smm a:not(:last-child) {
+    padding-right: 0px;
+    margin-bottom: 5px;
+  }
+
+  .smm-box .smm,
+.smm-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .smm-box {
+    padding-top: 20px;
+  }
+
+  .left-side .btn-fillter .btn p,
+.left-side .btn-fillter .btn .cercle-btn {
+    display: none;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .left-side .btn-fillter .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .left-side .btn-fillter .btn svg {
+    display: block;
+  }
+
+  .btn-disc p {
+    display: none;
+  }
+  .btn-disc svg {
+    display: block !important;
+  }
+
+  .smm-box .btn-disc {
+    padding: 5px 10px;
+    border: 1.9px solid #a568ff;
+  }
+
+  .left-side .btn-fillter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .smm-box .btn-disc ion-icon {
+    font-size: 18px;
+  }
+
+  .left-side .btn-fillter .btn {
+    padding: 10px 10px;
+    border-radius: 20% !important;
+  }
+
+  .smm-box .smm img {
+    height: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .content-header .id {
+    display: none !important;
+  }
+
+  .navBar {
+    display: block;
+  }
+
+  .nav-btn {
+    display: block !important;
+  }
+
+  .section .header .content-header > div:not(:last-child) {
+    margin-right: 0px;
+  }
+
+  .section .header {
+    padding: 2px 0px 0px 0px;
+    border-radius: 9px;
+  }
+
+  .content .sec-info {
+    flex-direction: column-reverse;
+  }
+
+  :root {
+    --width-left-side: 0px;
+    --header-img-height: 26px;
+  }
+
+  .left-side {
+    display: none;
+  }
+
+  .section .header .content-header {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .content .hero {
+    display: flex;
+    justify-content: center;
+    align-items: initial;
+    flex-direction: initial;
+  }
+
+  .content .sec-info .info-noti img {
+    height: 239px;
+    top: -179px;
+    left: 53%;
+  }
+
+  .hero .btn-hero {
+    z-index: 200;
+  }
+
+  .content .sec-info {
+    gap: 25px;
+  }
+
+  .content .sec-info .info-news {
+    margin-bottom: 10px;
+  }
+
+  .content .hero {
+    padding: 20px 0px;
+  }
+
+  .foundry-box {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .section {
+    height: initial;
+  }
+
+  .foundry-box .Stone-progress .info .process-box p {
+    font-size: 10px;
+  }
+
+  .evolving-stones-detail .stones {
+    overflow: scroll;
+  }
+
+  .evolving-stones-detail .stones .arrows {
+    display: none;
+  }
+
+  .foundry-box .foundry,
+.foundry-box .Stone-progress,
+.evolving-stones-detail .stones {
+    border-radius: 16px;
+  }
+
+  .evolving-stones-detail .stones {
+    padding: 10px 10px;
+  }
+
+  .evolving-stones-detail p {
+    text-align: center;
+    text-indent: 0;
+  }
+
+  .marketplace-box {
+    height: calc(100vh - (32px + 40px));
+  }
+
+  .evolving-stones-detail .stones img {
+    height: 55px;
+  }
+
+  .box-chests {
+    margin-bottom: 10px;
+  }
+
+  .avatar-info .info {
+    margin: 0px;
+  }
+
+  .avatar-info {
+    flex-direction: column;
+  }
+
+  .avatar-img {
+    display: none;
+  }
+
+  .avatar-info .info {
+    margin-top: 20px;
+  }
+
+  .detail-av.Training,
+.Evolve,
+.select.char {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .avatar-icons .icon::after {
+    border-radius: 50%;
+  }
+
+  .avatar-info .avatar-main {
+    height: 260px;
+  }
+
+  .detail-av .avatar-img {
+    display: block;
+  }
+
+  .detail-av.Evolving,
+.detail-av.Summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .detail-av.Evolving .status,
+.detail-av.Summary .status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .detail-av.Evolving .status .stones p,
+.detail-av.Summary .status .stones p {
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .box-chests {
+    grid-template-columns: repeat(2, minmax(160px, 160px));
+  }
+}

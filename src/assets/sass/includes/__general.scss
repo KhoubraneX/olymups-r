@@ -1,0 +1,31 @@
+@font-face {
+	font-family: "Montserrat";
+	src: url("../../fonts/Montserrat/Montserrat.ttf")
+}
+
+@font-face {
+	font-family: "Panton";
+	src: url("../../fonts/Panton W01 Heavy/Panton W01 Heavy.ttf")
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Panton";
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background-color: #2D2E42;
+	color: #ffff;
+	font-size: 14px;
+}

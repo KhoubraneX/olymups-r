@@ -1,0 +1,30 @@
+@mixin display-center($align : initial , $derction : initial) {
+  display: flex;
+  justify-content: center;
+  align-items: $align;
+  flex-direction: $derction;
+}
+
+@mixin display-center-postion($postion) {
+  position: $postion;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin border-linear-gradient(
+  $element,
+  $gradient: linear-gradient(168.19deg, #a568ff 0%, #432373 99.65%)
+) {
+#{$element}::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 3px);
+  height: calc(100% + 3px);
+  border-radius: 37px;
+  background: $gradient;
+}
+}
