@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom"
 import descord_icon from "../assets/img/descord 1@4x 1.svg"
 import telegram_icon from "../assets/img/telegram@4x 1.svg"
 import twitter_icon from "../assets/img/Twitter_icon 1.svg"
+// js
+import "../js/main"
 
 export default function NavBar({showNavBar , showDropdown}) {
     return (
