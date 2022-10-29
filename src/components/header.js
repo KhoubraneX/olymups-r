@@ -1,8 +1,8 @@
-export default function Headers() {
+export default function Headers({showDropdown}) {
     return (
         <div className="header">
           <div className="content-header">
-            <div className="nav-btn def">
+            <div className="nav-btn def" onClick={showDropdown}>
               <button className="nav-button cross-button" type="button" id="toggle-button" aria-label="open/close navigation"></button>
             </div>
             <div className="gold"><img src={require("../assets/img/Oly_Gold_Coin_Transparent_Shine 1.png")} alt=""/>

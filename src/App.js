@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route , Navigate } from "react-router-dom";
 
 import NavBar from "./components/navBar"
@@ -14,12 +14,16 @@ import Evolving from "./components/evolving";
 import Training from "./components/training";
 
 function App() {
+  const [openDropM, setopenDropM] = useState(false)
+  function handelDropDown() {
+    setopenDropM(!openDropM)
+  }
   return (
       <div className="main">
-        <NavBar/>
+        <NavBar showNavBar={openDropM} showDropdown={handelDropDown}/>
         <SideNav/>
         <div className="section container">
-          <Header/>
+          <Header showDropdown={handelDropDown}/>
           <div id="main-content">
           <Routes>
               <Route path='*' element={<Navigate to="home" />}/>

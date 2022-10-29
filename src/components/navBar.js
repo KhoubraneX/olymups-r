@@ -7,13 +7,13 @@ import twitter_icon from "../assets/img/Twitter_icon 1.svg"
 // js
 import "../js/main"
 
-export default function NavBar() {
+export default function NavBar({showNavBar , showDropdown}) {
     return (
-        <div className="navBar">
+        <div className={`navBar ${showNavBar ? "active-nav" : ""}`}>
         <div className="section container">
           <div className="header">
             <div className="content-header">
-              <div className="nav-btn">
+              <div className="nav-btn" onClick={showDropdown}>
                 <button className="nav-button cross-button" type="button" id="toggle-button" aria-label="open/close navigation"></button>
               </div>
               <div className="gold">
