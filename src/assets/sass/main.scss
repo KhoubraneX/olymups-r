@@ -196,6 +196,13 @@ $borderVal: 37px;
       p.par:nth-of-type(2) {
         font-size: 20px;
       }
+      button {
+        background: transparent;
+        outline: 0;
+        border: 0;
+        color: #ffff;
+        cursor: pointer;
+      }
       .btn-hero {
         letter-spacing: 0.2px;
         background: linear-gradient(156.43deg, #ffd600 8.43%, #ff8a00 84.81%);
@@ -203,7 +210,6 @@ $borderVal: 37px;
         border-radius: 24px;
         padding: 7px 35px;
         font-size: 12px;
-        cursor: pointer;
       }
     }
   }
@@ -293,7 +299,7 @@ $borderVal: 37px;
       box-shadow: 0px 0px 20px 5px rgb(114 213 255 / 80%);
     }
     &.active.Achilles::after {
-      border-color: #A568FF;
+      border-color: #a568ff;
       box-shadow: 0px 0px 20px 12px rgba(152, 135, 206, 0.6);
     }
     &.active.Medusa::after {
@@ -385,11 +391,44 @@ $borderVal: 37px;
     font-size: 20px;
     margin-bottom: 10px;
     .icon-edit {
-      margin-left: 5px;
-      height: 20px;
+      margin-left: 10px;
+      height: 17px;
       cursor: pointer;
     }
   }
+  .Ch-name {
+    display: flex;
+    align-items: center;
+    .chAvatar-name {
+    background-color: #2d2e42;
+    border: 1.9px solid #9887CE66;
+    outline: none;
+    text-indent: 10px;
+    padding: 6px 0;
+    max-width: 130px;
+    width: 100%;
+    border-radius: 12px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #fff;
+    &::placeholder {
+      color: #58527A;
+    }
+  }
+  button {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    &:first-of-type {
+      margin-right: 10px;
+    }
+    img {
+      height: 20px;
+    }
+  }
+}
   .process-detail {
     max-width: 300px;
     margin-bottom: 10px;
@@ -403,6 +442,7 @@ $borderVal: 37px;
       width: 100%;
       height: 15px;
       border-radius: 27px;
+      background-color: #575267;
       .process {
         border-radius: 27px;
         background: #ff6b00;
@@ -421,13 +461,23 @@ $borderVal: 37px;
     .btn-sell {
       button {
         background: linear-gradient(156.43deg, #ff6827 8.43%, #ff2416 84.81%);
+        a {
+          color: #fff;
+        }
       }
     }
     .btn-Evolve {
       margin-bottom: 15px;
       button {
         padding: 10px 30px;
-        background: linear-gradient(156.43deg, #ffd600 8.43%, #ff8a00 84.81%);
+        &.active {
+          background: linear-gradient(156.43deg, #ffd600 8.43%, #ff8a00 84.81%);
+          cursor: pointer;
+        }
+        &.desactive {
+          background: #6E697C;
+          cursor: initial;
+        }
       }
     }
     p.desc-Evolve {
@@ -466,7 +516,7 @@ $borderVal: 37px;
 
 .detail-av.Training {
   .select_mate {
-    border: var(--border-val) solid #a568ff ;
+    border: var(--border-val) solid #a568ff;
   }
   ul {
     border: var(--border-val) solid #a568ff;
@@ -647,7 +697,7 @@ $borderVal: 37px;
   }
 }
 
-.avatar-info .info .box a  {
+.avatar-info .info .box a {
   color: #ffff;
 }
 
@@ -1041,23 +1091,22 @@ $borderVal: 37px;
 }
 .active-nav {
   opacity: 1;
-  z-index: 9000 ;
+  z-index: 9000;
   transition: all 0.5s;
 }
 
-// 
+//
 
 .dropdown {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   svg {
     height: 17px;
     position: absolute;
-    
     z-index: 80000;
     right: 5px;
-    transition: 0.5s;
+    transition: 0.2s;
   }
 }
 
@@ -1094,8 +1143,8 @@ $borderVal: 37px;
 
 .dropdown-item-dot {
   opacity: 0;
-  color: #91A5BE;
-  transition: all .2s ease-in-out;
+  color: #91a5be;
+  transition: all 0.2s ease-in-out;
 }
 
 .dropdown-item-dot.selected {
@@ -1104,10 +1153,29 @@ $borderVal: 37px;
 
 .icon {
   font-size: 13px;
-  color: #91A5BE;
+  color: #91a5be;
   transform: rotate(0deg);
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .icon.open {
   transform: rotate(90deg);
+}
+
+.content {
+  animation: popMain 0.8s linear forwards;
+  opacity: 0;
+}
+
+.avatar-img {
+  animation: popMain 0.3s linear forwards;
+  opacity: 0;
+}
+
+@keyframes popMain {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

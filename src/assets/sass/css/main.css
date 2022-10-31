@@ -246,6 +246,13 @@ body {
 .content .hero .hero-content p.par:nth-of-type(2) {
   font-size: 20px;
 }
+.content .hero .hero-content button {
+  background: transparent;
+  outline: 0;
+  border: 0;
+  color: #ffff;
+  cursor: pointer;
+}
 .content .hero .hero-content .btn-hero {
   letter-spacing: 0.2px;
   background: linear-gradient(156.43deg, #ffd600 8.43%, #ff8a00 84.81%);
@@ -253,7 +260,6 @@ body {
   border-radius: 24px;
   padding: 7px 35px;
   font-size: 12px;
-  cursor: pointer;
 }
 .content .sec-info {
   margin-top: 35px;
@@ -342,7 +348,7 @@ body {
   box-shadow: 0px 0px 20px 5px rgba(114, 213, 255, 0.8);
 }
 .avatar-icons .icon.active.Achilles::after {
-  border-color: #A568FF;
+  border-color: #a568ff;
   box-shadow: 0px 0px 20px 12px rgba(152, 135, 206, 0.6);
 }
 .avatar-icons .icon.active.Medusa::after {
@@ -437,9 +443,42 @@ body {
   margin-bottom: 10px;
 }
 .detail-av .name .icon-edit {
-  margin-left: 5px;
-  height: 20px;
+  margin-left: 10px;
+  height: 17px;
   cursor: pointer;
+}
+.detail-av .Ch-name {
+  display: flex;
+  align-items: center;
+}
+.detail-av .Ch-name .chAvatar-name {
+  background-color: #2d2e42;
+  border: 1.9px solid #9887CE66;
+  outline: none;
+  text-indent: 10px;
+  padding: 6px 0;
+  max-width: 130px;
+  width: 100%;
+  border-radius: 12px;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+.detail-av .Ch-name .chAvatar-name::placeholder {
+  color: #58527A;
+}
+.detail-av .Ch-name button {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.detail-av .Ch-name button:first-of-type {
+  margin-right: 10px;
+}
+.detail-av .Ch-name button img {
+  height: 20px;
 }
 .detail-av .process-detail {
   max-width: 300px;
@@ -455,6 +494,7 @@ body {
   width: 100%;
   height: 15px;
   border-radius: 27px;
+  background-color: #575267;
 }
 .detail-av .process-detail .line-process .process {
   border-radius: 27px;
@@ -471,12 +511,22 @@ body {
 .detail-av .status .btn-sell button {
   background: linear-gradient(156.43deg, #ff6827 8.43%, #ff2416 84.81%);
 }
+.detail-av .status .btn-sell button a {
+  color: #fff;
+}
 .detail-av .status .btn-Evolve {
   margin-bottom: 15px;
 }
 .detail-av .status .btn-Evolve button {
   padding: 10px 30px;
+}
+.detail-av .status .btn-Evolve button.active {
   background: linear-gradient(156.43deg, #ffd600 8.43%, #ff8a00 84.81%);
+  cursor: pointer;
+}
+.detail-av .status .btn-Evolve button.desactive {
+  background: #6E697C;
+  cursor: initial;
 }
 .detail-av .status p.desc-Evolve {
   font-family: "Montserrat";
@@ -1132,7 +1182,7 @@ body {
   position: absolute;
   z-index: 80000;
   right: 5px;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .dropdown-header {
@@ -1168,7 +1218,7 @@ body {
 
 .dropdown-item-dot {
   opacity: 0;
-  color: #91A5BE;
+  color: #91a5be;
   transition: all 0.2s ease-in-out;
 }
 
@@ -1178,11 +1228,30 @@ body {
 
 .icon {
   font-size: 13px;
-  color: #91A5BE;
+  color: #91a5be;
   transform: rotate(0deg);
   transition: all 0.2s ease-in-out;
 }
 
 .icon.open {
   transform: rotate(90deg);
+}
+
+.content {
+  animation: popMain 0.8s linear forwards;
+  opacity: 0;
+}
+
+.avatar-img {
+  animation: popMain 0.3s linear forwards;
+  opacity: 0;
+}
+
+@keyframes popMain {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,6 +1,7 @@
 import {Dropdown}  from "../components/Dropdown"
 
 export default function Foundry() {
+  const dataStoneF = [{id: 0, label: "1 stone"}, {id: 1, label: "2 stone"} , {id: 2, label: "3 stone"}]
     return (
         <div className="content">
           <div className="main-foundry">
@@ -21,7 +22,7 @@ export default function Foundry() {
                 <div className="stone-create-box">
                   <p>Create:</p>
                   <div className="select_mate">
-                  <Dropdown />
+                  <Dropdown data={dataStoneF} />
                   </div>
                   <div className="btn-def">
                     <button>Start</button>

@@ -15,9 +15,13 @@ import Training from "./components/training";
 
 function App() {
   const [openDropM, setopenDropM] = useState(false)
+  
   function handelDropDown() {
     setopenDropM(!openDropM)
   }
+
+
+
   return (
       <div className="main">
         <NavBar showNavBar={openDropM} showDropdown={handelDropDown}/>
@@ -30,7 +34,7 @@ function App() {
               <Route path='home' element={<Home/>}/>
               <Route path='characters' element={<Characters/>}>
                   <Route path='' element={<Navigate to="summary" />}/>
-                  <Route path='summary' element={<Summary/>}/>
+                  <Route path='summary' element={<Summary />}/>
                   <Route path='evolving' element={<Evolving/>}/>
                   <Route path='training' element={<Training/>}/>
               </Route>

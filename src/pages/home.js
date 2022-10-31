@@ -7,7 +7,7 @@ export default function Home() {
               <p className="par">You currently have</p>
               <p className="par">3 700 $OLYMP</p>
               <p className="par">under vesting</p>
-              <div className="btn-hero">Buy $OLYMP</div>
+              <button><div className="btn-hero">Buy $OLYMP</div></button>
             </div>
           </div>
           <div className="sec-info">
