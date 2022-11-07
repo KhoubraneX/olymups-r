@@ -1,9 +1,10 @@
 import { Link, useOutletContext } from "react-router-dom";
 import ImgAvatar from "./ImgAvatar";
 export default function Summary() {
+
   const { activeChar , N_ChangeValue , isChnaged , onHandel_N_Change , onHandel_N_Click , onHandel_N_Valid } = useOutletContext()
   const { name , lvlInfo , stateInfo , img }  = activeChar
-  console.log(N_ChangeValue);
+
   return (
       <div className="detail-av Summary"> 
               <ImgAvatar img={img.avatar} />

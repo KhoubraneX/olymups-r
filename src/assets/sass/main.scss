@@ -315,6 +315,13 @@ $borderVal: 37px;
     }
   }
 }
+.popup--icon .popup__content {
+  .img-i {
+    img {
+      height: 80px;
+    }
+  }
+}
 .avatar-info {
   display: flex;
   .avatar-img {
@@ -323,6 +330,7 @@ $borderVal: 37px;
   }
   .img-av {
     margin: 0px 40px;
+    position: relative;
   }
   .avatar-main {
     height: 385px;
@@ -400,35 +408,35 @@ $borderVal: 37px;
     display: flex;
     align-items: center;
     .chAvatar-name {
-    background-color: #2d2e42;
-    border: 1.9px solid #9887CE66;
-    outline: none;
-    text-indent: 10px;
-    padding: 6px 0;
-    max-width: 130px;
-    width: 100%;
-    border-radius: 12px;
-    margin-right: 10px;
-    font-size: 16px;
-    color: #fff;
-    &::placeholder {
-      color: #58527A;
-    }
-  }
-  button {
-    padding: 0;
-    margin: 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-    &:first-of-type {
+      background-color: #2d2e42;
+      border: 1.9px solid #9887ce66;
+      outline: none;
+      text-indent: 10px;
+      padding: 6px 0;
+      max-width: 130px;
+      width: 100%;
+      border-radius: 12px;
       margin-right: 10px;
+      font-size: 16px;
+      color: #fff;
+      &::placeholder {
+        color: #58527a;
+      }
     }
-    img {
-      height: 20px;
+    button {
+      padding: 0;
+      margin: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      &:first-of-type {
+        margin-right: 10px;
+      }
+      img {
+        height: 20px;
+      }
     }
   }
-}
   .process-detail {
     max-width: 300px;
     margin-bottom: 10px;
@@ -475,7 +483,7 @@ $borderVal: 37px;
           cursor: pointer;
         }
         &.desactive {
-          background: #6E697C;
+          background: #6e697c;
           cursor: initial;
         }
       }
@@ -525,7 +533,58 @@ $borderVal: 37px;
   .dropdown-body.open {
     border: var(--border-val) solid #a568ff;
   }
+  .training-status {
+    .line-process {
+      position: relative;
+      overflow: hidden;
+      &.active::after {
+        content: "";
+        position: absolute;
+        background-color: #a468ff40;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        animation: tr 2s infinite ease-out;
+        border-radius: 27px;
+      }
+    }
+    .process {
+      background-color: #a568ff;
+    }
+  }
+  .level-process {
+    align-items: center;
+    .btn-def {
+      margin-top: 0;
+      button {
+        padding: 5px 15px;
+        font-size: 10px;
+        background: linear-gradient(156.43deg, #a568ff 8.43%, #5e3896 84.81%);
+        box-shadow: 1px 2px 4px rgba(71, 69, 73, 0.5);
+      }
+    }
+  }
+  .desc-time {
+    font-family: "Montserrat";
+    margin-top: 15px;
+    font-size: 12px;
+    span {
+      color: #a568ff;
+      font-family: "Montserrat";
+      font-weight: bolder;
+    }
+  }
 }
+
+@keyframes tr {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 .box-chests {
   display: grid;
   grid-template-columns: repeat(4, minmax(160px, 160px));
@@ -904,16 +963,6 @@ $borderVal: 37px;
 .select.char {
   display: flex;
   flex-direction: column;
-  .desc-time {
-    font-family: "Montserrat";
-    margin-top: 15px;
-    font-size: 12px;
-    span {
-      color: #a568ff;
-      font-family: "Montserrat";
-      font-weight: bolder;
-    }
-  }
   button {
     background: linear-gradient(156.43deg, #a568ff 8.43%, #69449f 84.81%);
   }
@@ -1177,5 +1226,297 @@ $borderVal: 37px;
   }
   100% {
     opacity: 1;
+  }
+}
+
+$colors: (
+  blue: #4fa0d0,
+  blue-light: #75b9e1,
+
+  orange: #ff9800,
+  orange-light: #ffb039,
+
+  green: #4ad890,
+  green-light: #71e6ab,
+
+  red: #ef5289,
+  red-light: #f578a4,
+);
+
+$popup: (
+  icon-size: 90px,
+  z-index: 10000,
+);
+
+$animation-duration: 0.3s;
+
+/**
+ * Buttons.
+ */
+.button {
+  margin-bottom: 4px;
+  padding: 8px 12px;
+  border: 1px solid map-get($colors, blue-light);
+
+  border-radius: 3px;
+  background: map-get($colors, blue);
+
+  cursor: pointer;
+
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #fff;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--warning {
+    border: 1px solid map-get($colors, orange-light);
+    background: map-get($colors, orange);
+  }
+
+  &--success {
+    border: 1px solid map-get($colors, green-light);
+    background: map-get($colors, green);
+  }
+
+  &--error {
+    border: 1px solid map-get($colors, red-light);
+    background: map-get($colors, red);
+  }
+}
+
+/**
+ * Popups.
+ */
+.popup {
+  $classes: (
+    root: #{&},
+    visible: #{&}--visible,
+    icon: #{&}--icon,
+    // BEVM Syntax for icon variations (https://webuild.envato.com/blog/chainable-bem-modifiers/)
+    question: ".-question",
+    success: ".-success",
+    error: ".-error",
+  );
+
+  visibility: hidden;
+
+  // Offset visibility to view "hide-popup" animation.
+  transition: visibility 0ms linear #{$animation-duration};
+
+  // As we have no ampersand in the selector, we need the "at-root" function
+  // to break out of nesting.
+  @at-root #{map-get($classes, visible)} {
+    visibility: visible;
+    transition: visibility 0ms;
+  }
+
+  // Overlay
+  &__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: map-get($popup, z-index);
+
+    height: 100%;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    transition: opacity #{$animation-duration} ease-in-out;
+
+    #{map-get($classes, visible)} & {
+      opacity: 1;
+    }
+  }
+
+  // Popup
+  &__content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: #{map-get($popup, z-index) + 1};
+
+    max-width: 400px;
+    min-width: 250px;
+    padding: 25px 0px;
+
+    background: #2d2e42;
+    border-radius: 3px;
+
+    text-align: center;
+
+    animation: hide-popup #{$animation-duration} forwards;
+
+    #{map-get($classes, visible)} & {
+      animation: show-popup #{$animation-duration} forwards;
+    }
+
+    /**
+		 * Popup types.
+		 */
+    #{map-get($classes, icon)} & {
+      padding-top: 30px;
+
+      &:before,
+      &:after {
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: block;
+        height: map-get($popup, icon-size);
+        width: map-get($popup, icon-size);
+      }
+
+      // Circle
+
+      @at-root #{selector-append(map-get($classes, visible), &)} {
+        &:before {
+          animation: show-icon-cirlce #{$animation-duration} forwards #{$animation-duration /
+            2};
+        }
+
+        &:after {
+          animation: show-icon #{$animation-duration} forwards #{$animation-duration};
+        }
+      }
+
+      /**
+			 * Different popup icon styles
+			 *
+			 * E.g. selector for type question: ".popup--icon.-question" to match class="popup--icon -question"
+			 *
+			 * To have an easier selector in SCSS we use a little workaround and rearrange the selectors:
+			 *  ".-question.popup--icon" is also matching class="popup--icon -question"
+			 */
+
+      // Question: ".-question.popup--icon"
+      @at-root #{selector-append(map-get($classes, question), &)} {
+        &:before {
+          border-color: map-get($colors, orange);
+        }
+      }
+
+      // Success: ".popup--icon.-success"
+      @at-root #{selector-append(map-get($classes, success), &)} {
+        &:before {
+          border-color: map-get($colors, green);
+        }
+      }
+
+      // Error: ".popup--icon.-success"
+      @at-root #{selector-append(map-get($classes, error), &)} {
+        &:before {
+          border-color: map-get($colors, red);
+        }
+
+        &:after {
+          content: "\2717";
+
+          color: map-get($colors, red);
+        }
+      }
+    }
+
+    // Popuptitle
+    &__title {
+      margin-bottom: 10px;
+
+      font-size: 22px;
+      font-weight: 100;
+      color: #ffffff;
+    }
+  }
+}
+
+/**
+ * Popup animations.
+ * Based on Sweet Alert: "https://t4t5.github.io/sweetalert/"
+ */
+@keyframes show-popup {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+
+    opacity: 0;
+  }
+  45% {
+    transform: translate(-50%, -50%) scale(1.05);
+
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes hide-popup {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5);
+
+    opacity: 0;
+  }
+}
+
+/**
+ * Icon animations.
+ */
+@keyframes show-icon {
+  0% {
+    transform: translateX(-50%) scale(0);
+
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+
+    opacity: 1;
+  }
+}
+
+@keyframes show-icon-cirlce {
+  0% {
+    transform: translateX(-50%) scale(1, 0);
+
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1, 1);
+
+    opacity: 1;
+  }
+}
+
+.img-i {
+  position: relative;
+  img:last-of-type {
+    position: absolute;
+    height: 130px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.main-message {
+  height: calc(100vh - (32px + 40px));
+  .message-ch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    white-space: nowrap;
   }
 }

@@ -14,6 +14,8 @@ import Evolving from "./components/evolving";
 import Training from "./components/training";
 
 function App() {
+
+  
   const [openDropM, setopenDropM] = useState(false)
   
   function handelDropDown() {

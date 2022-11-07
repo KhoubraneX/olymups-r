@@ -16,7 +16,7 @@
     height: 350px;
   }
 
-  .select.char .desc-time,
+  .detail-av.Training .desc-time,
 .detail-av .status p.desc-Evolve,
 .content .hero .hero-content .btn-hero,
 .box-chests .chest .detail-chest button {
@@ -475,5 +475,10 @@
 @media (max-width: 576px) {
   .box-chests {
     grid-template-columns: repeat(2, minmax(160px, 160px));
+  }
+
+  .avatar-info .info .box div {
+    font-size: 12px;
+    padding: 10px 20px;
   }
 }

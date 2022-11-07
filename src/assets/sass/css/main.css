@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Montserrat";
   src: url("../../fonts/Montserrat/Montserrat.ttf");
@@ -363,6 +364,10 @@ body {
   height: 70px;
 }
 
+.popup--icon .popup__content .img-i img {
+  height: 80px;
+}
+
 .avatar-info {
   display: flex;
 }
@@ -372,6 +377,7 @@ body {
 }
 .avatar-info .img-av {
   margin: 0px 40px;
+  position: relative;
 }
 .avatar-info .avatar-main {
   height: 385px;
@@ -453,7 +459,7 @@ body {
 }
 .detail-av .Ch-name .chAvatar-name {
   background-color: #2d2e42;
-  border: 1.9px solid #9887CE66;
+  border: 1.9px solid #9887ce66;
   outline: none;
   text-indent: 10px;
   padding: 6px 0;
@@ -465,7 +471,7 @@ body {
   color: #fff;
 }
 .detail-av .Ch-name .chAvatar-name::placeholder {
-  color: #58527A;
+  color: #58527a;
 }
 .detail-av .Ch-name button {
   padding: 0;
@@ -525,7 +531,7 @@ body {
   cursor: pointer;
 }
 .detail-av .status .btn-Evolve button.desactive {
-  background: #6E697C;
+  background: #6e697c;
   cursor: initial;
 }
 .detail-av .status p.desc-Evolve {
@@ -568,7 +574,54 @@ body {
 .detail-av.Training .dropdown-body.open {
   border: var(--border-val) solid #a568ff;
 }
+.detail-av.Training .training-status .line-process {
+  position: relative;
+  overflow: hidden;
+}
+.detail-av.Training .training-status .line-process.active::after {
+  content: "";
+  position: absolute;
+  background-color: #a468ff40;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  animation: tr 2s infinite ease-out;
+  border-radius: 27px;
+}
+.detail-av.Training .training-status .process {
+  background-color: #a568ff;
+}
+.detail-av.Training .level-process {
+  align-items: center;
+}
+.detail-av.Training .level-process .btn-def {
+  margin-top: 0;
+}
+.detail-av.Training .level-process .btn-def button {
+  padding: 5px 15px;
+  font-size: 10px;
+  background: linear-gradient(156.43deg, #a568ff 8.43%, #5e3896 84.81%);
+  box-shadow: 1px 2px 4px rgba(71, 69, 73, 0.5);
+}
+.detail-av.Training .desc-time {
+  font-family: "Montserrat";
+  margin-top: 15px;
+  font-size: 12px;
+}
+.detail-av.Training .desc-time span {
+  color: #a568ff;
+  font-family: "Montserrat";
+  font-weight: bolder;
+}
 
+@keyframes tr {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .box-chests {
   display: grid;
   grid-template-columns: repeat(4, minmax(160px, 160px));
@@ -978,16 +1031,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-.select.char .desc-time {
-  font-family: "Montserrat";
-  margin-top: 15px;
-  font-size: 12px;
-}
-.select.char .desc-time span {
-  color: #a568ff;
-  font-family: "Montserrat";
-  font-weight: bolder;
-}
 .select.char button {
   background: linear-gradient(156.43deg, #a568ff 8.43%, #69449f 84.81%);
 }
@@ -1254,4 +1297,204 @@ body {
   100% {
     opacity: 1;
   }
+}
+/**
+ * Buttons.
+ */
+.button {
+  margin-bottom: 4px;
+  padding: 8px 12px;
+  border: 1px solid #75b9e1;
+  border-radius: 3px;
+  background: #4fa0d0;
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #fff;
+}
+.button:focus {
+  outline: none;
+}
+.button--warning {
+  border: 1px solid #ffb039;
+  background: #ff9800;
+}
+.button--success {
+  border: 1px solid #71e6ab;
+  background: #4ad890;
+}
+.button--error {
+  border: 1px solid #f578a4;
+  background: #ef5289;
+}
+
+/**
+ * Popups.
+ */
+.popup {
+  visibility: hidden;
+  transition: visibility 0ms linear 0.3s;
+}
+.popup--visible {
+  visibility: visible;
+  transition: visibility 0ms;
+}
+
+.popup__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.popup--visible .popup__background {
+  opacity: 1;
+}
+.popup__content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10001;
+  max-width: 400px;
+  min-width: 250px;
+  padding: 25px 0px;
+  background: #2d2e42;
+  border-radius: 3px;
+  text-align: center;
+  animation: hide-popup 0.3s forwards;
+  /**
+  * Popup types.
+  */
+}
+.popup--visible .popup__content {
+  animation: show-popup 0.3s forwards;
+}
+.popup--icon .popup__content {
+  padding-top: 30px;
+  /**
+  * Different popup icon styles
+  *
+  * E.g. selector for type question: ".popup--icon.-question" to match class="popup--icon -question"
+  *
+  * To have an easier selector in SCSS we use a little workaround and rearrange the selectors:
+  *  ".-question.popup--icon" is also matching class="popup--icon -question"
+  */
+}
+.popup--icon .popup__content:before, .popup--icon .popup__content:after {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  height: 90px;
+  width: 90px;
+}
+.popup--visible.popup--icon .popup__content:before {
+  animation: show-icon-cirlce 0.3s forwards 0.15s;
+}
+.popup--visible.popup--icon .popup__content:after {
+  animation: show-icon 0.3s forwards 0.3s;
+}
+
+.-question.popup--icon .popup__content:before {
+  border-color: #ff9800;
+}
+
+.-success.popup--icon .popup__content:before {
+  border-color: #4ad890;
+}
+
+.-error.popup--icon .popup__content:before {
+  border-color: #ef5289;
+}
+.-error.popup--icon .popup__content:after {
+  content: "✗";
+  color: #ef5289;
+}
+
+.popup__content__title {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+/**
+ * Popup animations.
+ * Based on Sweet Alert: "https://t4t5.github.io/sweetalert/"
+ */
+@keyframes show-popup {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+  }
+  45% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes hide-popup {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+}
+/**
+ * Icon animations.
+ */
+@keyframes show-icon {
+  0% {
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes show-icon-cirlce {
+  0% {
+    transform: translateX(-50%) scale(1, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1, 1);
+    opacity: 1;
+  }
+}
+.img-i {
+  position: relative;
+}
+.img-i img:last-of-type {
+  position: absolute;
+  height: 130px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-message {
+  height: calc(100vh - (32px + 40px));
+}
+.main-message .message-ch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  white-space: nowrap;
 }
