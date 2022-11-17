@@ -126,10 +126,13 @@ body {
   height: 33px;
 }
 .smm-box .btn-disc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 17px;
   text-align: center;
   padding: 7px 0;
   border-radius: 30px;
-  margin: 0 17px;
   color: #a568ff;
   border: 3px solid #a568ff;
   background: transparent;
@@ -138,6 +141,11 @@ body {
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
+}
+.smm-box .btn-disc button {
+  background-color: transparent;
+  color: inherit;
+  border: none;
 }
 .smm-box .btn-disc svg {
   height: 20px;
@@ -159,6 +167,7 @@ body {
   padding: 2px 23px 0px 0px;
   border-radius: 16px;
   border: 1.8px solid #9887ce;
+  animation: popMain 0.3s linear forwards;
 }
 .section .header .content-header > div:not(:last-child) {
   margin-right: 55px;
@@ -249,7 +258,6 @@ body {
 }
 .content .hero .hero-content button {
   background: transparent;
-  outline: 0;
   border: 0;
   color: #ffff;
   cursor: pointer;
@@ -545,6 +553,9 @@ body {
   height: var(--border-val);
   background: #a568ff;
 }
+.detail-av .status .stones {
+  height: 67.67px;
+}
 .detail-av .status .stones p {
   letter-spacing: 0.5px;
   font-size: 16px;
@@ -823,6 +834,10 @@ body {
   background: linear-gradient(156.43deg, #35d4c0 8.43%, #348379 84.81%);
   width: 170px;
 }
+.foundry-box button.desctive {
+  background: #575267;
+  cursor: initial;
+}
 
 .avatar-info .info .box a {
   color: #ffff;
@@ -857,12 +872,23 @@ body {
   justify-content: space-between;
 }
 .Stone-progress .info .process-box .content .btn-def {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .Stone-progress .info .process-box .content .btn-def button {
   width: 85px;
   font-size: 12px;
   padding: 7px 15px;
+}
+.Stone-progress .info.claimed p {
+  color: #878492;
+}
+.Stone-progress .info.claimed .btn-def button {
+  background: #575267;
+  color: #878492;
+  cursor: initial;
+}
+.Stone-progress .info.claimed .process-line-f {
+  background-color: #575267;
 }
 
 /* ///  DECORATION CSS ///  */
@@ -993,11 +1019,14 @@ body {
   border: var(--border-val) solid #35d4c0;
   border-radius: 37px;
   display: flex;
-  padding: 10px 60px;
+  padding: 10px 35px;
   position: relative;
+  overflow: hidden;
+  height: 103.76px;
 }
 .evolving-stones-detail .stones .arrows {
   padding: 0 15px;
+  z-index: 5000;
 }
 .evolving-stones-detail .stones .arrows svg {
   height: 25px;
@@ -1006,6 +1035,7 @@ body {
   height: 40px;
 }
 .evolving-stones-detail .stones .stone {
+  animation: show-popup2 0.3s forwards;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1033,6 +1063,12 @@ body {
 }
 .select.char button {
   background: linear-gradient(156.43deg, #a568ff 8.43%, #69449f 84.81%);
+}
+
+.button.button--falid {
+  background: #d04f4f;
+  border: 1px solid #d04f4f;
+  margin-left: 20px;
 }
 
 .nav-button {
@@ -1374,7 +1410,7 @@ body {
   animation: show-popup 0.3s forwards;
 }
 .popup--icon .popup__content {
-  padding-top: 30px;
+  padding: 30px;
   /**
   * Different popup icon styles
   *
@@ -1427,6 +1463,22 @@ body {
  * Popup animations.
  * Based on Sweet Alert: "https://t4t5.github.io/sweetalert/"
  */
+@keyframes show-popup2 {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  45% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes show-popup {
   0% {
     transform: translate(-50%, -50%) scale(0.7);

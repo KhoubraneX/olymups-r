@@ -10,8 +10,10 @@ export default {
             , trainingInfo: {
                 isTrainig: false,
                 timeTrainig: { days: 0, houres: 0 },
+                dateExteped : null,
                 p_givenToCh: 0,
-                process: 0
+                process: 0,
+                daySelect : { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
             }
         },
         {
@@ -24,8 +26,10 @@ export default {
             , trainingInfo: {
                 isTrainig: false,
                 timeTrainig: { days: 0, houres: 0 },
+                dateExteped : null,
                 process: 0,
-                p_givenToCh: 0
+                p_givenToCh: 0,
+                daySelect : { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
             }
         },
         {
@@ -38,8 +42,10 @@ export default {
             , trainingInfo: {
                 isTrainig: false,
                 timeTrainig: { days: 0, houres: 0 },
+                dateExteped : null,
                 p_givenToCh: 0,
-                process: 0
+                process: 0,
+                daySelect : { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
             }
         },
         {
@@ -52,8 +58,10 @@ export default {
             , trainingInfo: {
                 isTrainig: false,
                 timeTrainig: { days: 0, houres: 0 },
+                dateExteped : null,
                 p_givenToCh: 0,
-                process: 0
+                process: 0,
+                daySelect : { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
             }
         },
         {
@@ -66,8 +74,10 @@ export default {
             , trainingInfo: {
                 isTrainig: false,
                 timeTrainig: { days: 0, houres: 0 },
+                dateExteped : null,
                 p_givenToCh: 0,
-                process: 0
+                process: 0,
+                daySelect : { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
             }
         }
     ],

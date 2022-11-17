@@ -23,7 +23,6 @@ export default function Characters() {
     
   }
 
-
   function handel_N_Click() {
     setN_Change(!N_Change)
   }
@@ -35,7 +34,7 @@ export default function Characters() {
 
   function handel_N_Valid() {
     let Characters = [...charactersInfo]
-    if (N_ChangeValue.trim() != "") {
+    if (N_ChangeValue.trim() != "" && N_ChangeValue.length < 15) {
       Characters.forEach((e) => {
         if (e.id == activeChar.id) {
           e.name.avatarName = N_ChangeValue
