@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/olymups-r/static/css/main.48cedaa2.css",
-    "main.js": "/olymups-r/static/js/main.10e48811.js",
+    "main.js": "/olymups-r/static/js/main.4943e4f1.js",
     "static/media/Chimera_RunningPose 1.png": "/olymups-r/static/media/Chimera_RunningPose 1.e255faf6858975285341.png",
     "static/media/Medusa.png": "/olymups-r/static/media/Medusa.638ebb83d12e9a728735.png",
     "static/media/sbata.png": "/olymups-r/static/media/sbata.476f9ff4d3df02e4791a.png",
@@ -31,10 +31,10 @@
     "static/media/Twitter_icon 1.svg": "/olymups-r/static/media/Twitter_icon 1.5299fb050175c2979b817322a9ac0de0.svg",
     "index.html": "/olymups-r/index.html",
     "main.48cedaa2.css.map": "/olymups-r/static/css/main.48cedaa2.css.map",
-    "main.10e48811.js.map": "/olymups-r/static/js/main.10e48811.js.map"
+    "main.4943e4f1.js.map": "/olymups-r/static/js/main.4943e4f1.js.map"
   },
   "entrypoints": [
     "static/css/main.48cedaa2.css",
-    "static/js/main.10e48811.js"
+    "static/js/main.4943e4f1.js"
   ]
 }
