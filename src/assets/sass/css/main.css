@@ -784,6 +784,18 @@ body {
   border: var(--border-val) solid #35d4c0;
   border-radius: 37px;
 }
+.foundry-box .foundry .process-box,
+.foundry-box .Stone-progress .process-box {
+  margin-top: 15px;
+}
+.foundry-box .foundry .process-box .btn-def,
+.foundry-box .Stone-progress .process-box .btn-def {
+  margin-top: 0;
+}
+.foundry-box .foundry .process-box .time,
+.foundry-box .Stone-progress .process-box .time {
+  margin-bottom: 5px;
+}
 .foundry-box .foundry .title,
 .foundry-box .Stone-progress .title {
   font-size: 20px;

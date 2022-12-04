@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Routes, Route , Navigate } from "react-router-dom";
-
 import NavBar from "./components/navBar"
 import SideNav from "./components/sideNav"
 import Header from "./components/header"
@@ -21,8 +20,6 @@ function App() {
   function handelDropDown() {
     setopenDropM(!openDropM)
   }
-
-
 
   return (
       <div className="main">

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { HashRouter } from 'react-router-dom'
 import "./assets/sass/css/main.css"
 import "./assets/sass/css/mediaQuery.css"
 
@@ -9,8 +10,8 @@ import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <BrowserRouter>
+    <HashRouter>
       <App />
-      </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );

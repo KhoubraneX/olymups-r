@@ -1,5 +1,5 @@
 export default {
-    characters : [
+    characters: [
         {
             id: 0
             , name: { avatarName: "Achilles 1", className: "Achilles" }
@@ -10,10 +10,10 @@ export default {
             , trainingInfo: {
                 isTrainig: false,
                 timeTrainig: { days: 0, houres: 0 },
-                dateExteped : null,
+                dateExteped: null,
                 p_givenToCh: 0,
                 process: 0,
-                daySelect : { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
+                daySelect: { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
             }
         },
         {
@@ -26,10 +26,10 @@ export default {
             , trainingInfo: {
                 isTrainig: false,
                 timeTrainig: { days: 0, houres: 0 },
-                dateExteped : null,
+                dateExteped: null,
                 process: 0,
                 p_givenToCh: 0,
-                daySelect : { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
+                daySelect: { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
             }
         },
         {
@@ -42,10 +42,10 @@ export default {
             , trainingInfo: {
                 isTrainig: false,
                 timeTrainig: { days: 0, houres: 0 },
-                dateExteped : null,
+                dateExteped: null,
                 p_givenToCh: 0,
                 process: 0,
-                daySelect : { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
+                daySelect: { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
             }
         },
         {
@@ -58,10 +58,10 @@ export default {
             , trainingInfo: {
                 isTrainig: false,
                 timeTrainig: { days: 0, houres: 0 },
-                dateExteped : null,
+                dateExteped: null,
                 p_givenToCh: 0,
                 process: 0,
-                daySelect : { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
+                daySelect: { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
             }
         },
         {
@@ -74,18 +74,21 @@ export default {
             , trainingInfo: {
                 isTrainig: false,
                 timeTrainig: { days: 0, houres: 0 },
-                dateExteped : null,
+                dateExteped: null,
                 p_givenToCh: 0,
                 process: 0,
-                daySelect : { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
+                daySelect: { id: null, day: null, label: null, p_givenToCh: { start: null, end: null } }
             }
         }
     ],
-    chests : [
+    chests: [
         { name: { box: "Common Chest", class: "Common" }, img: { box: "Asset 3@4x 1.png" }, color_icon: "#9887ce" },
         { name: { box: "Uncommon Chest", class: "Uncommon" }, img: { box: "Asset 5@4x 1.png" }, color_icon: "#49a6d0" },
         { name: { box: "Rare Chest", class: "Rare" }, img: { box: "Asset 3@4x 1-1.png" }, color_icon: "#eebf20" },
         { name: { box: "Legendary Chest", class: "Legendary" }, img: { box: "Asset 3@4x 1-2.png" }, color_icon: "#47bac1" },
+    ], taskesStone: [
+        { id: 0, stone: 4, process: { start: 4, total: 4 }, timeTrainig: { houres: 0, minute: 0 }, isTimeTrainig: false, timeExteped: null, claimed: true },
+        { id: 1, stone: 6, process: { start: 6, total: 6 }, timeTrainig: { houres: 0, minute: 0 }, isTimeTrainig: false, timeExteped: null, claimed: false }
     ]
 }
 

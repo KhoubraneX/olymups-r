@@ -721,6 +721,15 @@ $borderVal: 37px;
     padding: 15px 40px 15px 40px;
     border: var(--border-val) solid #35d4c0;
     border-radius: 37px;
+    .process-box {
+      margin-top: 15px;
+      .btn-def {
+        margin-top: 0;
+      }
+      .time {
+        margin-bottom: 5px;
+      }
+    }
     .title {
       font-size: 20px;
       margin-bottom: 10px;
